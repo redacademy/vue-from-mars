@@ -22,43 +22,32 @@
 
 	 	<div id="content" class="site-content" style="display:none">
 
-			<div id="primary" class="content-area">
-				<main id="main" class="site-main" role="main">
+      <?php
+         if ( have_posts() ) :
 
-				<?php
-				if ( have_posts() ) :
+            if ( is_home() && ! is_front_page() ) {
+               echo '<h1>' . single_post_title( '', false ) . '</h1>';
+            }
 
-					/* Start the Loop */
-					while ( have_posts() ) : the_post(); ?>
+            while ( have_posts() ) : the_post();
 
-						 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		 					<header class="entry-header">
-		 						<?php
-		 							if ( is_single() ) {
-		 								the_title( '<h1 class="entry-title">', '</h1>' );
-		 							} else {
-		 								the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		 							}
-		 						?>
-		 					</header><!-- .entry-header -->
+               if ( is_singular() ) {
+                  the_title( '<h1>', '</h1>' );
+               } else {
+                  the_title( '<h2><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
+               }
 
-		 					<div class="entry-content">
-		 						<?php the_content(); ?>
-		 					</div><!-- .entry-content -->
+               the_content();
 
-		 				</article><!-- #post-## -->
+            endwhile;
 
-					<?php	endwhile;
+         endif;
+      ?>
 
-				endif; ?>
-
-				</main><!-- #main -->
-			</div><!-- #primary -->
 		</div><!-- #content -->
-	</div><!-- #page -->
 
-   <div id="app"></div>
-   <!-- <app></app> -->
+      <div id="app"></div>
+	</div><!-- #page -->
 
 <?php wp_footer(); ?>
 
