@@ -47,7 +47,7 @@
 
 		</div><!-- #content -->
 
-      <div id="app"></div>
+      <div id="app"></div><!-- #app -->
 	</div><!-- #page -->
 
 <?php wp_footer(); ?>
