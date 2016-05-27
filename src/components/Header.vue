@@ -165,8 +165,7 @@
       background:
          linear-gradient(to top, rgba(0,0,0,.15) 0%, rgba(0,0,0,.15) 100%) no-repeat,
          rgba(67,22,17,1) url('wp-content/themes/vue-from-mars/dist/assets/images/mars-bkgd.jpg') top center no-repeat;
-         // linear-gradient(to top, rgba(20,20,20,1) 0%, rgba(67,22,17,1) 80%) no-repeat;
-      background-size: auto 100vh;
+      background-size: cover, auto 100vh;
       min-height: 100vh;
 
       @include min-tablet {
@@ -180,7 +179,7 @@
 
    .site-title {
       h1 {
-         @include font-size(4);
+         @include font-size(2.8);
          margin: 0 0 $base__space-unit;
          text-align: center;
 
@@ -189,6 +188,14 @@
             color: white;
             padding-bottom: 0;
             text-decoration: none;
+         }
+
+         @include min-tablet {
+            @include font-size(3.6);
+         }
+
+         @include min-desktop {
+            @include font-size(4);
          }
       }
    }
