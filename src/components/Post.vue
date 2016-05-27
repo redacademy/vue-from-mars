@@ -53,5 +53,15 @@
     }
 </script>
 
-<style>
+<style lang="sass">
+   @import '../assets/sass/_variables.scss';
+   @import '../assets/sass/_mixins.scss';
+
+   .post {
+      margin-bottom: $base__space-unit * 2;
+   }
+
+   .entry-title {
+      @include font-size(2);
+   }
 </style>

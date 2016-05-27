@@ -1,0 +1,37 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Media queries
+@mixin min-big-phone {
+  @media (min-width: $big-phone-width) {
+    @content;
+  }
+}
+
+@mixin min-tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin min-desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin min-screen-height($min-height) {
+	@media (min-height: $min-height) {
+		@content;
+	}
+}

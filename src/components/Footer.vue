@@ -1,7 +1,7 @@
 <template>
-   <footer class="footer">
+   <footer class="site-footer">
       <div class="container">
-         Copyright &copy; <a v-link="{ path: base_path }">{{ site_name }}</a>
+         Copyright &copy; 2016 <a class="site-link" v-link="{ path: base_path }">RED Mars Colony</a>
       </div>
    </footer>
 </template>
@@ -19,10 +19,18 @@
    }
 </script>
 
-<style>
-   /*.footer {
-      font-size: 14px;
-      color: #999;
-      margin-top: 50px;
-   }*/
+<style lang="sass">
+   @import '../assets/sass/_variables.scss';
+   @import '../assets/sass/_mixins.scss';
+
+   .site-footer {
+      font-family: $font__alt;
+      @include font-size(.9);
+      padding: $base__space-unit 0;
+      text-align: center;
+
+      .site-link {
+         margin-left: ($base__space-unit / 2);
+      }
+   }
 </style>

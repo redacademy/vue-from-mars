@@ -12,6 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+   <link href="https://fonts.googleapis.com/css?family=Economica:400,400italic,700italic,700|Playfair+Display:400,400italic,700,700italic" rel="stylesheet">
 
  	<?php wp_head(); ?>
  </head>
