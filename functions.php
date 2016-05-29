@@ -25,7 +25,7 @@ add_action( 'after_setup_theme', 'vfm_setup' );
  * Enqueue scripts and styles.
  */
 function vfm_scripts() {
-	wp_enqueue_style( 'vfm-normalize', get_template_directory_uri() . '/src/assets/css/normalize.css', false, '4.0.0' );
+	wp_enqueue_style( 'vfm-normalize', get_template_directory_uri() . '/dist/assets/css/normalize.css', false, '4.0.0' );
 	wp_enqueue_style( 'vfm-style', get_stylesheet_uri() );
 
 	// wp_enqueue_script( 'vfm-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
