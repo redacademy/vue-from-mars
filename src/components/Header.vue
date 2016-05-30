@@ -164,7 +164,7 @@
    .site {
       background:
          linear-gradient(to top, rgba(0,0,0,.15) 0%, rgba(0,0,0,.15) 100%) no-repeat,
-         rgba(67,22,17,1) url('wp-content/themes/vue-from-mars/dist/assets/images/mars-bkgd.jpg') top center no-repeat;
+         rgba(67,22,17,1) url('../wp-content/themes/vue-from-mars/dist/assets/images/mars-bkgd.jpg') top center no-repeat;
       background-size: cover, auto 100vh;
       min-height: 100vh;
 
