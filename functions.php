@@ -10,12 +10,8 @@
 if ( ! function_exists( 'vfm_setup' ) ) :
 
 function vfm_setup() {
-
-	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-
 	add_theme_support( 'title-tag' );
-
 	add_theme_support( 'post-thumbnails' );
 }
 endif;
@@ -25,8 +21,8 @@ add_action( 'after_setup_theme', 'vfm_setup' );
  * Enqueue scripts and styles.
  */
 function vfm_scripts() {
-	wp_enqueue_style( 'vfm-normalize', get_template_directory_uri() . '/dist/assets/css/normalize.css', false, '4.0.0' );
 	wp_enqueue_style( 'vfm-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'vfm-base', get_template_directory_uri() . '/dist/assets/css/base.css', false, false );
 
 	// wp_enqueue_script( 'vfm-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
