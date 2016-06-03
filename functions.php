@@ -65,3 +65,6 @@ function vfm_routes() {
 	wp_reset_postdata();
 	return $routes;
 }
+
+/* Allow Cross-Domain Requests */
+add_filter( 'allowed_http_origin', '__return_true' );
